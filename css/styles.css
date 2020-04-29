@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Sunlife';
+    src: url('../fonts/SunLifeSans-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'SunlifeHeading';
+    src: url('../fonts/SunLifeSans-Black.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'SunlifeLight';
+    src: url('../fonts/SunLifeSans-Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'SunlifeLightCondensed';
+    src: url('../fonts/SunLifeSans-LightCondensed.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'SunlifeScript';
+    src: url('../fonts/SunLifeScript-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'SunlifeBlack';
+    src: url('../fonts/SunLifeSans-Black.otf') format("opentype");
+}
+
+body {
+    font-family: 'Sunlife', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.bg{
+    background-color: #283655;
+    /* #6D7993; */
+}
+.sub {
+    font-family: 'SunlifeLight', sans-serif;
+    font-size: 16px;
+}
+
+.top-section {
+    margin-top: 3rem;
+}
+
+.title {
+    font-family: 'SunlifeBlack';
+    color: #ffc300;
+    font-size: 30px;
+}
+
+.health-portal {
+    color: lightgrey;
+    font-family: 'Sunlife';
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.subtitle {
+    color: rgb(255, 203, 5);
+    margin-top: -1rem;
+    font-size: 20px;
+}
+
+.date {
+    margin-top: 1rem;
+    color: lightgrey;
+
+}
+
+.weekly_progress {
+    font-size: 12px;
+    font-weight: bolder;
+    color: lightgrey;
+    margin-top: -1rem;
+    margin-left: 0.1rem;
+}
+
+.progress {
+    height: 6px;
+    width: 240px;
+}
+
+.zero-width {
+    width: 0%;
+}
+
+.third-width {
+    width: 33%
+}
+
+.two-third-width {
+    width: 67%
+}
+
+.full-width {
+    width: 100%
+}
+
+
+.reward_description {
+    font-style: italic;
+    color: gray;
+    font-size: 12px;
+    margin-top: 2.5rem;
+}
+
+.accordion-header {
+    color: rgb(0, 76, 108);
+    font-size: 22px;
+    font-family: 'SunlifeScript';
+
+}
+
+.info-card {
+    border-radius: 15%;
+    margin-top: 0.5rem;
+    margin-left: 5px;
+    width: 343px;
+}
+
+.tracker-nav {
+    background-color: rgb(247, 247, 247);
+}
+
+.icon_buttons {
+    height: 30px;
+}
+
+.icon-nav {
+    background-color: rgb(247, 247, 247);
+    border-radius: 5%;
+    padding: 5px;
+    margin-top: 1rem;
+
+}
+
+.btn {
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.btn+.active {
+    background-color: rgb(255, 203, 5);
+}
+
+.all {
+    color: rgb(0, 76, 108);
+    font-weight: bold;
+}
+
+.add-goal {
+    margin-left: 1rem;
+    color: white;
+    width: 180px;
+    height: 45px;
+    background-color: rgb(0, 76, 108);
+    font-size: 14px;
+    margin-top: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.duration-nav {
+    background-color: rgb(247, 247, 247);
+    border-radius: 5%;
+    padding: 5px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.dur {
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 8px;
+    color: grey;
+
+}
+
+.time-nav {
+    padding: 5px;
+    padding-bottom: 0px;
+    margin-top: 1rem;
+    border-bottom: 2px solid lightgrey;
+}
+
+.days {
+    padding: 3px;
+    font-size: 12px;
+    color: grey;
+    margin-top: 0.5rem;
+}
+
+.gym-head {
+    /* color: #7268A8; */
+    color: white;
+    font-weight: bolder;
+}
+
+.swim-head {
+    color: #c70039;
+    color: white;
+    font-weight: bolder;
+}
+
+.run-head {
+    color: #3caea3;
+    color: white;
+    font-weight: bolder;
+}
+
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    /* Change this colour to be what you want a non-selected box to show */
+    border-radius: 30%;
+    /* Change this to choose how rounded you want the corners to be */
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #eee;
+    /* Change this colour to be what you want to show when hovering over the checkbox */
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.goal1 {
+    background-color: #451e3e;
+    /* Change this colour to be what a selected box colour should be */
+}
+
+.container input:checked~.goal2 {
+    background-color: #c70039;
+    /* Change this colour to be what a selected box colour should be */
+}
+
+.container input:checked~.goal3 {
+    background-color: #3caea3;
+    /* Change this colour to be what a selected box colour should be */
+}
+
+/*Copy the above and paste, replace goal2 with goal# to let each goal have a different selected colour*/
+
+/* The checkbox container */
+.cbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 64px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.goalStats {
+    display: inline-block;
+    color: lightgrey;
+}
+
+.varNum {
+    padding-left: 1em;
+    color: lightgrey;
+}
+
+.goal1-card {
+    border-radius: 5px;
+    background-color: #451e3e; 
+    border: none;
+    margin-left: 0.1rem;
+    color: white;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 550px;
+    border-radius: 15px;
+}
+
+.goal2-card {
+    border-radius: 5px;
+    background-color: #c70039;
+    border: none;
+    margin-left: 0.1rem;
+    color: white;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 550px;
+    border-radius: 15px;
+}
+
+.goal3-card {
+    border-radius: 5px;
+    background-color: #3caea3;
+    border: none;
+    margin-left: 0.1rem;
+    color: white;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 550px;
+    border-radius: 15px;
+}
+
+.goal-header {
+    font-size: 20px;
+}
+
+.small-font {
+    font-size: 14px;
+    font-family: "Sunlife";
+    margin: 0px;
+    padding: 0px;
+    padding-top: 8px;
+}
+
+.completed {
+    font-size: 18px;
+    font-family: "Sunlife";
+    font-weight: bolder;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    color: white;
+
+}
+
+.completed_desc {
+    padding-left: 23px;
+    font-size: 12px;
+    padding-top: 2px;
+    color: lightgrey;
+}
+
+.your-progress {
+    color: rgb(255, 203, 5);
+    font-size: 18px;
+    font-weight: bold;
+    border-top: lightgrey 2px dotted;
+    padding: 15px;
+}
+
+.progress-card {
+    margin-top: -0.5rem;
+    border-radius: 20px;
+    border: solid 1px grey;
+    width: 170px;
+    height: 70px;
+
+}
+
+.progress-card-text {
+    font-family: 'SunlifeBlack';
+    padding: 10px;
+
+
+}
+
+.small-font-card {
+    font-size: 11px;
+    font-family: "Sunlife";
+    margin-top: -2rem;
+    padding: 8px;
+}
+
+.green {
+    color: rgb(0, 176, 80);
+}
+
+.red {
+    color: #3caea3;
+
+}
+
+.stars {
+    font-size: 22px;
+    color: rgb(255, 203, 5);
+    font-weight: bold;
+    padding-left: 8px;
+    margin-top: -2rem;
+}
+
+.grey-star {
+    color: lightgrey;
+}
+
+.reward-card {
+    margin-top: -0.5rem;
+    border-radius: 20px;
+    border: solid 1px rgb(255, 203, 5);
+    width: 270px;
+    height: 70px;
+
+}
+
+.reward-cursive {
+    font-family: 'SunlifeScript';
+    color: rgb(255, 203, 5);
+    font-size: 20px;
+    margin-top: 18px;
+    background: white;
+}
+
+.question-mark {
+    font-family: 'SunlifeBlack';
+    font-size: 45px;
+    color: lightgrey;
+    padding-left: 200px;
+    margin-top: -3.7rem;
+}
+
+.more-articles {
+    margin-left: 1.5rem;
+    color: white;
+    width: 130px;
+    height: 35px;
+    background-color: rgb(0, 76, 108);
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+.ella-tip {
+    color: grey;
+    font-style: italic;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.ella-pic {
+    margin-left: 1rem;
+}
+
+.learn-more {
+    margin-left: 1.5rem;
+    color: white;
+    width: 120px;
+    height: 35px;
+    background-color: rgb(0, 76, 108);
+    font-size: 14px;
+    margin-top: 1rem;
+}

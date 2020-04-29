@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Tally-Track</title>
+</head>
+
+<body>
+    <div class="bg">
+        <br><br><br>
+    <header class="top-section">
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <div class="col-3">
+                    <p class="title">&nbsp;TALLY-TRACK <span class="health-portal"><br>&nbsp;&nbsp;My Habits</span></p>
+                </div>
+                <div class="col-5">
+                    <p class="date">Thu, Apr 2</p>
+                    <div class="row weekly_progress">
+                        <p id="GoalsProgress">0</p>
+                        <p>% of daily goals achieved</p>
+                       
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning zero-width" role="progressbar" id="progress-bar-length"
+                            aria-valuenow=0 aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="row container">
+                    <button type="button" class="btn add-goal">EDIT DAILY HABITS</button>
+                    <div class="duration-nav">
+                        <button type="button" class="btn dur active" id="weekly">Weekly</button>
+                        <button type="button" class="btn dur" id="monthly">Monthly</button>
+                        <button type="button" class="btn dur" id="yearly">Yearly</button>
+                        <button type="button" class="btn dur" id="alltime">All Time</button>
+                    </div>
+                </div>
+                <div class="row container">
+                </div>
+                <div class="row container">
+                    <div class="days">
+                        <br>
+                    </div>
+                </div>
+                <div class="row container">
+                    <div class="col-2">
+                        <p class="gym-head">
+                            Meditate
+                        </p>
+                        <p class="swim-head">
+                            Stretch
+                        </p>
+                        <p class="run-head">
+                            Reflect
+                        </p>
+                    </div>
+                    <div class="col-10">
+                        <div class="row checkboxRow">
+                            <label class=" cbox">
+                                <input id="check1goal1" type="checkbox" onclick="updateGoal1();">
+                                <!--Add id "Check#Goal# and onclick="updateGoal#();" to each checkbox-->
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check2goal1" type="checkbox" onclick="updateGoal1();">
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check3goal1" type="checkbox" onclick="updateGoal1();">
+                                <!--Add id "Check#Goal# and onclick="updateGoal#();" to each checkbox-->
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check4goal1" type="checkbox" onclick="updateGoal1();">
+                                <!--Add id "Check#Goal# and onclick="updateGoal#();" to each checkbox-->
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check5goal1" type="checkbox" onclick="updateGoal1();">
+                                <!--Add id "Check#Goal# and onclick="updateGoal#();" to each checkbox-->
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check6goal1" type="checkbox" onclick="updateGoal1();">
+                                <!--Add id "Check#Goal# and onclick="updateGoal#();" to each checkbox-->
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check7goal1" type="checkbox" onclick="updateGoal1();">
+                                <!--Add id "Check#Goal# and onclick="updateGoal#();" to each checkbox-->
+                                <span class="checkmark goal1"></span>
+                            </label>
+                            <p id="numGoal1" class="goalStats varNum">0</p>
+                            <p class="goalStats">/</p>
+                            <p id="Goal1Total" class="goalStats">3</p>
+                            <p class="completed_desc" id="Goal1StatusDescr"></p>
+                        </div>
+                        <div class="row checkboxRow">
+                            <label class=" cbox">
+                                <input id="check1goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check2goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check3goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check4goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check5goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check6goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check7goal2" type="checkbox" onclick="updateGoal2();">
+                                <span class="checkmark  goal2"></span>
+                            </label>
+                            <p id="numGoal2" class="goalStats varNum">0</p>
+                            <p class="goalStats">/</p>
+                            <p id="Goal2Total" class="goalStats">2</p>
+                            <p class="completed_desc" id="Goal2StatusDescr"></p>
+                            <!-- Change ID to numGoal#, and /3 or /# is hardcoded-->
+                        </div>
+                        <div class="row checkboxRow">
+                            <label class=" cbox">
+                                <input id="check1goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check2goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check3goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check4goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check5goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check6goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <label class=" cbox">
+                                <input id="check7goal3" type="checkbox" onclick="updateGoal3();">
+                                <span class="checkmark  goal3"></span>
+                            </label>
+                            <p id="numGoal3" class="goalStats varNum">0</p>
+                            <p class="goalStats">/</p>
+                            <p id="Goal3Total" class="goalStats">1</p>
+                            <p class="completed_desc" id="Goal3StatusDescr"></p>
+                            <!-- Change ID to numGoal#, and /3 or /# is hardcoded-->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row container">
+                    <div class="your-progress">
+                        <p>Your
+                            Progress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <div class="row container goal1-card">
+                    <p class="goal-header">
+                        &nbsp;&nbsp;Meditate & relax. &nbsp;&nbsp;&nbsp;
+                    </p>
+                    <p class="small-font">
+                        three times per day
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <p class="completed" id="Goal1Status"></p> &nbsp;&nbsp;&nbsp
+                    </p>
+                </div>
+                <div class="row container goal2-card">
+                    <p class="goal-header">
+                        &nbsp;&nbsp;Stretch & yoga. &nbsp;&nbsp;
+                    </p>
+                    <p class="small-font">
+                        &nbsp;&nbsp;&nbsp;&nbsp;two times per day
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <p class="completed" id="Goal2Status"></p> &nbsp;&nbsp;&nbsp
+                    </p>
+                </div>
+                <div class="row container goal3-card">
+                    <p class="goal-header">
+                        &nbsp;&nbsp;Reflect & review. &nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+                    <p class="small-font">
+                        once per day
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <p class="completed" id="Goal3Status"></p> &nbsp;&nbsp;&nbsp
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <br><br><br><br>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./js/index.js">
+    </script>
+
+    <script>
+        var a = 0;
+        var b = 0;
+        var c = 0;
+
+        function updateGoal1() {
+            var x = 0;
+            //var a = 0;
+            var check1 = document.getElementById("check1goal1").checked;
+            if (check1 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check2goal1").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check3goal1").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check4goal1").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check5goal1").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check6goal1").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check7goal1").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            document.getElementById("numGoal1").textContent = x;
+            var total = parseInt(document.getElementById("Goal1Total").textContent);
+            if (x >= total) {
+                document.getElementById("Goal1Status").textContent = "streak:  ✧ ";
+                document.getElementById("Goal1StatusDescr").textContent = "Woohoo!";
+                a = 1;
+                calcProgress(a, b, c);
+            } else {
+                document.getElementById("Goal1Status").textContent = "";
+                document.getElementById("Goal1StatusDescr").textContent = "";
+                a = 0;
+                calcProgress(a, b, c);
+            }
+        }
+
+        function updateGoal2() {
+            var x = 0;
+            //var b = 0;
+            var check1 = document.getElementById("check1goal2").checked;
+            if (check1 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check2goal2").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check3goal2").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check4goal2").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check5goal2").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check6goal2").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check7goal2").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            document.getElementById("numGoal2").textContent = x;
+            var total = parseInt(document.getElementById("Goal2Total").textContent);
+            if (x >= total) {
+                document.getElementById("Goal2Status").textContent = "streak:  ✧ ✧ ✧ ";
+                document.getElementById("Goal2StatusDescr").textContent = "Great Job!";
+                b = 1;
+                calcProgress(a, b, c);
+            } else {
+                document.getElementById("Goal2Status").textContent = "";
+                document.getElementById("Goal2StatusDescr").textContent = "";
+                b = 0;
+                calcProgress(a, b, c);
+            }
+        }
+
+        function updateGoal3() {
+            var x = 0;
+            //var c = 0;
+            var check1 = document.getElementById("check1goal3").checked;
+            if (check1 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check2goal3").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check3goal3").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check4goal3").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check5goal3").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check6goal3").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            var check2 = document.getElementById("check7goal3").checked;
+            if (check2 == true) {
+                x += 1;
+            }
+            document.getElementById("numGoal3").textContent = x;
+            var total = parseInt(document.getElementById("Goal3Total").textContent);
+            if (x >= total) {
+                document.getElementById("Goal3Status").textContent = "streak:  ✧ ✧" ;
+                document.getElementById("Goal3StatusDescr").textContent = "All Done!";
+                c = 1;
+                calcProgress(a, b, c);
+
+
+            } else {
+                document.getElementById("Goal3Status").textContent = "";
+                document.getElementById("Goal3StatusDescr").textContent = "";
+                c = 0;
+                calcProgress(a, b, c);
+            }
+        }
+
+        function calcProgress(a, b, c) {
+            let progress = Math.round((a + b + c) / 3 * 100);
+            document.getElementById("GoalsProgress").textContent = progress;
+
+            if (progress == 0) {
+                document.getElementById("progress-bar-length").classList.add("zero-width");
+
+                document.getElementById("progress-bar-length").classList.remove("third-width");
+                document.getElementById("progress-bar-length").classList.remove("two-third-width");
+                document.getElementById("progress-bar-length").classList.remove("full-width");
+
+            } else if (progress == 33) {
+                document.getElementById("progress-bar-length").classList.add("third-width");
+
+                document.getElementById("progress-bar-length").classList.remove("zero-width");
+                document.getElementById("progress-bar-length").classList.remove("two-third-width");
+                document.getElementById("progress-bar-length").classList.remove("full-width");
+            } else if (progress == 67) {
+                document.getElementById("progress-bar-length").classList.add("two-third-width");
+
+                document.getElementById("progress-bar-length").classList.remove("zero-width");
+                document.getElementById("progress-bar-length").classList.remove("third-width");
+                document.getElementById("progress-bar-length").classList.remove("full-width");
+            } else if (progress = 100) {
+                document.getElementById("progress-bar-length").classList.add("full-width");
+
+                document.getElementById("progress-bar-length").classList.remove("zero-width");
+                document.getElementById("progress-bar-length").classList.remove("third-width");
+                document.getElementById("progress-bar-length").classList.remove("two-third-width");
+            }
+
+
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#toggle-one").trigger('click');
+        });
+        $(document).ready(function () {
+            $("#toggle-two").trigger('click');
+        });
+    </script>
+
+
+</body>
